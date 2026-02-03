@@ -241,7 +241,8 @@ body{
 /* BUG BOUNTY SECTION */
 .bug-card{
   display:flex;
-  gap:30px;
+  align-items:flex-start;
+  gap:40px;
   background:#111;
   padding:30px;
   border-radius:12px;
@@ -254,10 +255,20 @@ body{
   box-shadow:0 0 25px #00aaff;
 }
 
+.bug-image{
+  flex:1;
+}
+
 .bug-image img{
-  width:300px;
-  border-radius:8px;
+  width:100%;
+  max-width:400px;
+  border-radius:10px;
   border:1px solid #00aaff;
+  display:block;
+}
+
+.bug-content{
+  flex:1.2;
 }
 
 .bug-content h3{
@@ -265,9 +276,14 @@ body{
   margin-bottom:15px;
 }
 
+.bug-content p{
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
 .bug-content ul{
-  margin:15px 0;
   padding-left:20px;
+  margin-bottom:20px;
 }
 
 .bug-content li{
@@ -276,7 +292,6 @@ body{
 
 .btn{
   display:inline-block;
-  margin-top:10px;
   padding:10px 18px;
   background:#00aaff;
   border-radius:6px;
@@ -288,6 +303,23 @@ body{
 .btn:hover{
   background:#0090cc;
 }
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 900px){
+
+  .bug-card{
+    flex-direction:column;
+    gap:25px;
+    padding:25px;
+  }
+
+  .bug-image img{
+    max-width:100%;
+  }
+
+}
+
 
 
 .social-links a{
